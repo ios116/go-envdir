@@ -4,6 +4,10 @@ import "testing"
 
 func TestEnvdir(t *testing.T) {
 
-	RunWithEnv("./test_var")
+	b, err := RunWithEnv("./test_var", "env")
+	if err != nil {
+		t.Fatal(err)
 
+	}
+	t.Log(string(b))
 }
