@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// RunWithEnv runs a program with environment variables from the directory, returning output bytes and errors
 func RunWithEnv(dir string, prog string) (b []byte, err error) {
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
@@ -17,7 +18,7 @@ func RunWithEnv(dir string, prog string) (b []byte, err error) {
 		return
 	}
 	if prog == "" {
-		return b, errors.New("programma is empty")
+		return b, errors.New("program name is empty")
 	}
 	cmd := exec.Command(prog)
 	envs := make([]string, len(files))

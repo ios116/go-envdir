@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"log"
+
 	"github.com/ios116/go-envdir/envdir"
 	flag "github.com/spf13/pflag"
-	"log"
 )
 
 var dirname string
