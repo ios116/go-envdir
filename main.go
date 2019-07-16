@@ -13,7 +13,7 @@ var prog string
 
 func init() {
 	flag.StringVarP(&dirname, "directory", "d", ".", "a directory with an environment values")
-	flag.StringVarP(&prog, "programma", "p", "", "programma to run")
+	flag.StringVarP(&prog, "programma", "p", "", "program to run")
 }
 func main() {
 	flag.Parse()
